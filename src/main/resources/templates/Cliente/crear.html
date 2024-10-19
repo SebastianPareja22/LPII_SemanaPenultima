@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inicio</title>
+</head>
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+
+<body>
+	<h1>Registro de Clientes</h1>
+
+	<div class="container">
+
+		<form th:object="${empleado}" method="post" th:action="@{/empleado/crear}">
+			<div class="form-group">
+				<label for="txtCodigo_cliente">Codigo de Cliente</label>
+				<input th:field="*{codigo_cliente}" type="text" class="form-control" id="txtCodigo_cliente" value="0" >
+			</div>
+			<div class="form-group">
+				<label for="txtNombre">Nombre</label>
+				<input th:field="*{nombre}" type="text" class="form-control" id="txtNombre">
+			</div>
+			<div class="form-group">
+				<label for="txtApellidoPaterno">Apellido Paterno</label>
+				<input th:field="*{apellidoPaterno}" type="text" class="form-control" id="txtApellidoPaterno">
+			</div>
+            <div class="form-group"></div>
+				<label for="txtApellidoMaterno">Apellido Materno</label>
+				<input th:field="*{apellidoMaterno}" type="text" class="form-control" id="txtApellidoMaterno">
+			</div>
+            <div class="form-group"></div>
+				<label for="txtDocumento">Documento</label>
+				<input th:field="*{documento}" type="text" class="form-control" id="txtDocumento">
+			</div>
+			<button type="submit" class="btn btn-primary">Guardar</button>
+		</form>
+	</div>
+</body>
+<script th:src="@{/js/jquery.slim.min.js}"></script>
+<script th:src="@{/js/popper.min.js}"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
+</html>
